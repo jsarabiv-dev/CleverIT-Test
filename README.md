@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # CleveritFront
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
@@ -29,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # CleverIT-Test
 Repositorio para test de CleverIT-Test "Desarrollador Backend Java"
->>>>>>> 60366d35fc3deb42e73966fb8898de2a75789583
+
