@@ -1,0 +1,46 @@
+<div class="container bg-dark text-white w-75 p-3 h-auto" style="border-radius: 5px;">
+
+    <div *ngIf="isEdit else elseTitleBlock">
+        <h1 style="color: white;">Crear Usuario</h1>
+    </div>
+
+    <ng-template #elseTitleBlock>
+        <div>
+            <h1 style="color: white;">Editar Usuario</h1>
+        </div>
+    </ng-template>
+
+
+    <form>
+        <!--
+        <div class="form-group">
+            <label for="id">ID Usuario</label>
+            <input type="text" class="form-control" placeholder="ID Usuaro" [(ngModel)]="user.id" name="id">
+        </div> -->
+        <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" placeholder="Nombre" [(ngModel)]="user.nombre" name="nombre">
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" placeholder="Name" [(ngModel)]="user.name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" class="form-control" placeholder="Apellido" [(ngModel)]="user.apellido" name="apellido">
+        </div>
+        <div class="form-group">
+            <label for="lastname">LastName</label>
+            <input type="text" class="form-control" placeholder="LastName" [(ngModel)]="user.lastname" name="lastname">
+        </div>
+
+        <div class="w-25 p-3" style="margin-left: auto; margin-right: auto; margin-bottom: 30px;">
+            <button type="submit" style="float: left;" class="btn btn-primary" (click)="createUser()" *ngIf="isEdit else elseBlock">Crear</button>
+            <ng-template #elseBlock>
+                <button type="submit" style="float: left;" class="btn btn-primary" (click)="editUser()">Editar</button>
+            </ng-template>
+            <button type="submit" style="float: right;" class="btn btn-danger"  [routerLink] = "['/home']">Cancelar</button>
+        </div>
+    </form>
+
+</div>
